@@ -1,0 +1,13 @@
+
+.base-menu, .base-nav, .blog-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.base-nav > li, a {
+  margin-right: 12px;
+  text-decoration: none;
+  font-size: 22px;
+}

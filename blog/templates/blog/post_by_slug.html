@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'blog/css/post.css' %}">
+</head>
+<body>
+{% include 'includes/navbar.html' %}
+
+
+<div class="flex_div">
+    <div class="post-div">
+        <div class="post_name">
+            <h1>{{ post.name }}</h1>
+        </div>
+        <div class="description_div">{{ post.description }}</div>
+            <p class="post_author_date">{{ post.author.full_name }} on {{ post.date_publ }}</p>
+        <div class="content_div">
+            {{ post.content }}
+        </div>
+    </div>
+    <div class="author_other_posts">
+        <h2>{{ post.author.full_name }}'s other posts</h2>
+        <ol>
+            {% for p in other_posts %}
+                <li>{{ p.name }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ name }} {% endblock %}
+
+
+{% block content %}
+<div class="leftcolumn">
+    {% for article in posts %}
+        <div class="card">
+            <h2>{{ article.title }}</h2>
+            <h5> {{ article.description }}, {{ article.date }} by {{ article.author.full_name }}</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p> {{ article.content }} </p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

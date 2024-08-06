@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> </title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block other_styles %} {% endblock %}
+</head>
+<body>
+
+{% include 'includes/navbar.html' %}
+
+<h2 style="text-align: center">{% block title %} {% endblock %}</h2>
+
+{% include 'blog/includes/header.html' %}
+
+<div class="row">
+    {% block content %} {% endblock %}
+</div>
+
+
+{% include 'blog/includes/footer.html' %}
+
+{% include 'includes/navbar.html' %}
+
+</body>
+</html>

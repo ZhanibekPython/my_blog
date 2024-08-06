@@ -1,0 +1,35 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+<body>
+
+<div class="base-menu">
+    <div></div>
+    <div class="base-logo">
+        <img src="{% static 'img/blogo.png' %}" width=80px height=80px alt="Our-logo">
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>
+        <ul class="blog-navbar">
+            <li><a href="{% url 'main_page' %}">Main page</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="{% url 'all_posts' %}">All posts</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="{% url 'new_event_form' %}">New post</a></li>
+            <li><a href="{% url 'new_author_form' %}">New author</a></li>
+        </ul>
+    </div>
+    <div></div>
+</div>
+
+</body>
+</html>

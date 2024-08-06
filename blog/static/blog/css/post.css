@@ -1,0 +1,30 @@
+* {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex_div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.post-div {
+    height: 100%;
+    width: 65%;
+    border: 2px solid green;
+}
+
+.author_other_posts {
+    height: 100%;
+    width: 30%;
+    border: 2px solid green;
+}
+
+.post_name, .description_div, .post_author_date, .content_div {
+    text-align: center;
+    padding-bottom: 8px;
+}

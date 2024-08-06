@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все посты</title>
+    <link rel="stylesheet" href="{% static 'blog/css/all_posts.css' %}">
+</head>
+<body>
+    <section class="posts_section">
+        <div class="all_posts_header"></div>
+        {% include 'includes/navbar.html' %}
+        <div class="all_posts">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Content</th>
+                    <th>Date</th>
+                </tr>
+                {% for post in object_list %}
+                    <tr>
+                        <td><a href="{{ post.get_absolute_url }}">{{ post.name }}</a></td>
+                        <td>{{ post.author.full_name }}</td>
+                        <td>{{ post.content }}</td>
+                        <td>{{ post.date_publ }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+</body>
+</html>
